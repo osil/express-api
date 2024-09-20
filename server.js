@@ -11,7 +11,11 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
+const corsOptions = {
+  origin: process.env.ORIGIN_ALLOWED,
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 // Routes
 readdirSync("./routers").map((file) =>
