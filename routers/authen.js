@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { authen } = require("../controllers/authenController");
+const authenController = require("../controllers/authenController");
 
-router.get("/authen", authen);
+router.get("/authen", authenController.authen);
 
 module.exports = router;
