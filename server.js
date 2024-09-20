@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+require("dotenv").config();
+const port = process.env.PORT || 3000;
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const { readdirSync } = require("fs");
