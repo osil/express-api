@@ -15,7 +15,7 @@ app.use(cors());
 
 // Routes
 readdirSync("./routers").map((file) =>
-  app.use("/api", require(`./routers/${file}`))
+  app.use("", require(`./routers/${file}`))
 );
 
 app.listen(port, () => {
