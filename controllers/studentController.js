@@ -1,4 +1,4 @@
-exports.students = (req, res) => {
+exports.students = async (req, res) => {
   res.json({
     students: [
       {
